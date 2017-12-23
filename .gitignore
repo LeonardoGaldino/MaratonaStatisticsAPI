@@ -1,0 +1,21 @@
+# Avoids virtual environment going to remote repository
+venv/
+
+# Avoids reddis dump file going to remote repository
+dump.rdb
+
+# Avoids bytecode files going to remote repository
+MaratonaStatistics/API/__pycache__
+MaratonaStatistics/MaratonaStatistics/__pycache__
+
+# Avoids migrations going to remote repository
+MaratonaStatistics/API/migrations
+
+# Avoids log files going to remote repository
+MaratonaStatistics/*_log
+
+# Avoids database file going to remote repository
+MaratonaStatistics/db.sqlite3
+
+# Avoids celerybeat schedule file going to remote repository
+MaratonaStatistics/celerybeat-schedule
