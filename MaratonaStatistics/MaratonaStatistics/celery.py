@@ -22,7 +22,7 @@ app.config_from_object('django.conf:settings')
 app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 
 @periodic_task(
-    run_every=(crontab('*', '*', '*', '*', '*')),
+    run_every=(crontab(0, '*', '*', '*', '*')),
     name="fetch_competitors_data",
     ignore_result=True
 )
