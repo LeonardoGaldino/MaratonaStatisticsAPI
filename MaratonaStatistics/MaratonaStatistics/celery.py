@@ -32,13 +32,40 @@ def fetch_competitors_data():
     from API.models import Competitor, Rating
     Competitor.objects.all().delete()
     Rating.objects.all().delete()
-    competitors = [{'handle': 'leogaldino',
-                    'name': 'Leogal'}, {
-                    'handle': 'carnero',
-                    'name': 'Diguinho'},
-                    {'handle': 'GabrielPessoa',
-                    'name': 'GabrielPessoa'}
-                  ]
+    competitors = [{
+                        'handle': 'leogaldino',
+                        'name': 'Leogal'
+                    }, {
+                        'handle': 'carnero',
+                        'name': 'Diguinho'
+                    }, {
+                        'handle': 'GabrielPessoa',
+                        'name': 'GabrielPessoa'
+                    }, {
+                        'handle': 'bcs5',
+                        'name': 'bcs5'
+                    }, {
+                        'handle': 'dgmn',
+                        'name': 'dgmn'
+                    }, {
+                        'handle': 'josecruz',
+                        'name': 'josecruz'
+                    }, {
+                        'handle': 'luucasv',
+                        'name': 'luucasv'
+                    }, {
+                        'handle': 'vrvs',
+                        'name': 'vrvs'
+                    }, {
+                        'handle': 'tfg',
+                        'name': 'tfg'
+                    }, {
+                        'handle': 'rafaelmachado23',
+                        'name': 'rafaelmachado23'
+                    }, {
+                        'handle': 'alpgc',
+                        'name': 'alpgc'
+                    }]
     api_url = settings.CF_API_URL
     api_method = 'user.rating'
     for comp in competitors:
