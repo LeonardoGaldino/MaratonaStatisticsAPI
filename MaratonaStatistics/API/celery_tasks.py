@@ -17,7 +17,6 @@ def create_competitors():
 
 @celery_app.task
 def t_create_competitors(name='API.celery_tasks.t_create_competitors'):
-	Competitor.objects.all().delete()
 	competitors = Competitors.competitors
 	bulk_insert_list = [Competitor(handle=comp['handle'], name=comp['name']) for comp in competitors]
 	Competitor.objects.bulk_create(bulk_insert_list)
